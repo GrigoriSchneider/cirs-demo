@@ -380,7 +380,7 @@ function zeigeFallDetails(fall) {
       const zeile = document.createElement("tr");
 
       const keyZelle = document.createElement("th");
-      keyZelle.textContent = key;
+      keyZelle.textContent = key.charAt(0).toUpperCase() + key.slice(1);
       zeile.appendChild(keyZelle);
 
       const wertZelle = document.createElement("td");

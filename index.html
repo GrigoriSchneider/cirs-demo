@@ -9,7 +9,8 @@
   <body class="container">
     <form action="/suche" method="post">
       <h2>Fallsuche</h2>
-      <h2>Suche im Fallbericht</h2>
+      <hr />
+      <h2 class="mb-1">Suche im Fallbericht</h2>
       <!-- Fall-Nr. Inputfeld -->
       <label for="fallnr">Fall-Nr.:</label>
       <input type="text" id="fallnr" name="fallnr" /><br /><br />
@@ -71,7 +72,7 @@
         <!-- Weitere Optionen hier hinzufügen --> </select
       ><br /><br />
 
-      <h2>Suche im Analysebericht</h2>
+      <h2 class="mb-1">Suche im Analysebericht</h2>
 
       <label for="titel">Titel</label><br />
       <input type="text" id="titel" name="titel" />
@@ -164,7 +165,7 @@
       ><br /><br />
 
       <!-- Freitextsuche -->
-      <h2>Suche nach Freitext</h2>
+      <h2 class="mb-1">Suche nach Freitext</h2>
       <input type="text" id="freitext" name="freitext" /><br /><br />
 
       <input type="submit" value="Suchen" />
@@ -200,6 +201,10 @@
           <!-- Hier werden die Details eingefügt -->
         </table>
       </div>
+    </div>
+
+    <div class="footer">
+      <p>Quelle: Netzwerk Krankenhaus</p>
     </div>
 
     <script src="faelle.js"></script>
