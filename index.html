@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mehrfache Suche</title>
+  </head>
+  <body class="container">
+    <form action="/suche" method="post">
+      <h2>Fallsuche</h2>
+      <h2>Suche im Fallbericht</h2>
+      <!-- Fall-Nr. Inputfeld -->
+      <label for="fallnr">Fall-Nr.:</label>
+      <input type="text" id="fallnr" name="fallnr" /><br /><br />
+
+      <!-- Fachgebiet Dropdown -->
+      <label for="fachgebiet">Fachgebiet:</label>
+      <select id="fachgebiet" name="fachgebiet">
+        <option value="">Bitte wählen</option>
+        <option value="allgemeinmedizin">Allgemeinmedizin</option>
+        <option value="anaesthesiologie">Anästhesiologie</option>
+        <option value="augenheilkunde">Augenheilkunde</option>
+        <option value="chirurgie">Chirurgie</option>
+        <option value="frauenheilkunde/geburtshilfe"
+          >Frauenheilkunde / Geburtshilfe</option
+        >
+        <option value="haut-geschlechtskrankheiten"
+          >Haut- und Geschlechtskrankheiten</option
+        >
+        <option value="hno">HNO-Heilkunde</option>
+        <option value="innere-medizin">Innere Medizin</option>
+        <option value="kinder-jugendmedizin">Kinder- und Jugendmedizin</option>
+        <option value="neurologie">Neurologie</option>
+        <option value="psychiatrie">Psychiatrie</option>
+        <option value="psychotherapie">Psychotherapie</option>
+        <option value="radiologie">Radiologie</option>
+        <option value="urologie">Urologie</option>
+
+        <!-- Weitere Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <!-- Wo Dropdown -->
+      <label for="wo">Wo:</label>
+      <select id="wo" name="wo">
+        <option value="">Bitte wählen</option>
+        <option value="krankenhaus">Krankenhaus</option>
+        <option value="notfalldienst/rettungswesen"
+          >Notfalldienst / Rettungswesen</option
+        >
+        <option value="hausbesuch">Hausbesuch</option>
+        <option value="pflege/altenheim">Pflege / Altenheim</option>
+        <!-- Weitere Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <!-- Kontext Dropdown -->
+      <label for="kontext">Kontext:</label>
+      <select id="kontext" name="kontext">
+        <option value="">Bitte wählen</option>
+        <option value="praevention">Prävention</option>
+        <option value="diagnosestellung">Diagnosestellung</option>
+        <option value="nichtinvasivemassnahmen"
+          >Nichtinvasive Massnahmen (Diagnostik / Therapie)</option
+        >
+        <option value="invasivemassnahmen"
+          >Invasive Massnahmen (Diagnostik / Therapie)</option
+        >
+        <option value="organisation"
+          >Organisation (Schnittstellen / Kommunikation)</option
+        >
+        <!-- Weitere Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <h2>Suche im Analysebericht</h2>
+
+      <label for="titel">Titel</label><br />
+      <input type="text" id="titel" name="titel" />
+      <br /><br />
+
+      <!-- Analysebericht Dropdowns -->
+      <label for="klassifikation">Klassifikation:</label><br />
+      <select id="klassifikation" name="klassifikation">
+        <option value="">Bitte wählen</option>
+        <option value="typischerfall">Typischer Fall</option>
+        <option value="falldesmonats">Fall des Monats</option>
+        <option value="alert">Alert</option>
+        <option value="interessanterfall">Interessanter Fall</option>
+        <!-- Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <label for="faktoren">Beitragende Faktoren:</label><br />
+      <select id="faktoren" name="faktoren">
+        <option value="">Bitte wählen</option>
+        <option value="kommunikation"
+          >Kommunikation (im Team, mit Patienten, mit anderen Ärzten
+          etc.)</option
+        >
+        <option value="ausbildung/training">Ausbildung und Training</option>
+        <option value="persoenlichefaktoren"
+          >Persönliche Faktoren des Mitarbeiters (Müdigkeit, Gesundheit,
+          Motivation etc.)</option
+        >
+        <option value="teamfaktoren"
+          >Teamfaktoren (Zusammenarbeit, Vertrauen, Kultur, Führung
+          etc.)</option
+        >
+        <option value="organisation"
+          >Organisation (zu wenig Personal, Standards, Arbeitsbelastung, Abläufe
+          etc.)</option
+        >
+        <option value="patientenfaktoren"
+          >Patientenfaktoren (Sprache, Einschränkungen, medizinischer Zustand
+          etc.)</option
+        >
+        <option value="technischegeraete"
+          >Technische Geräte (Funktionsfähigkeit, Bedienbarkeit etc.)</option
+        >
+        <option value="kontextinstitution"
+          >Kontext der Institution (Organisation des Gesundheitswesens
+          etc.)</option
+        >
+        <option value="medikation">Medikation (Medikamente beteiligt?)</option>
+        <!-- Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <label for="ereignistyp">Ereignis-Typ:</label><br />
+      <select id="ereignistyp" name="ereignistyp">
+        <option value="">Bitte wählen</option>
+        <option value="verwaltung-patientenversorgung"
+          >Verwaltung im Rahmen der Patientenversorgung</option
+        >
+        <option value="klinischer-prozess"
+          >Klinischer Prozess / Eingriff</option
+        >
+        <option value="dokumentation">Dokumentation</option>
+        <option value="krankenhausinfektion">Krankenhausinfektion</option>
+        <option value="medikation/infusionen">Medikation / Infusionen</option>
+        <option value="blut/blutprodukte">Blut / Blutprodukte</option>
+        <option value="ernaehrung">Ernährung</option>
+        <option value="sauerstoff/narkosegase">Sauerstoff / Narkosegase</option>
+        <option value="medizinischegeräte"
+          >Medizinische Geräte / Ausstattung</option
+        >
+        <option value="verhaltenmitarbeiter/patient"
+          >Verhalten (Mitarbeiter / Patient)</option
+        >
+        <option value="patientenunfaelle">Patientenunfälle</option>
+        <option value="infrastruktur"
+          >Infrastruktur / Gebäude / Inventar</option
+        >
+        <option value="ressourcen"
+          >Ressourcen / Organisatorisches Management</option
+        >
+        <!-- Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <label for="schlagwort">Schlagwort:</label><br />
+      <select id="schlagwort" name="schlagwort">
+        <option value="">Bitte wählen</option>
+        <option value="personalkonflikt">Personalkonflikt</option>
+        <option value="stress">Stress</option>
+        <option value="transport">Transport</option>
+        <!-- Optionen hier hinzufügen --> </select
+      ><br /><br />
+
+      <!-- Freitextsuche -->
+      <h2>Suche nach Freitext</h2>
+      <input type="text" id="freitext" name="freitext" /><br /><br />
+
+      <input type="submit" value="Suchen" />
+      <input
+        type="button"
+        value="Alle Fälle anzeigen"
+        onclick="resetTabelle()"
+      />
+    </form>
+
+    <div id="ergebnisse">
+      <table id="fallTabelle">
+        <thead>
+          <tr>
+            <th>Fall-Nr.</th>
+            <th>Titel</th>
+            <th>Klassifikation</th>
+            <th>Feedback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Hier werden die Daten eingefügt -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Das Overlay -->
+    <div id="fallDetailsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Fall Details</h2>
+        <table id="fallDetailsTabelle">
+          <!-- Hier werden die Details eingefügt -->
+        </table>
+      </div>
+    </div>
+
+    <script src="faelle.js"></script>
+  </body>
+</html>
